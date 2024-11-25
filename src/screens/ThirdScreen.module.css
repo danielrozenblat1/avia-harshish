@@ -1,0 +1,411 @@
+.title {
+    font-family: "Assistant";
+    font-size: 2.8rem;
+    text-align: center;
+    color: black;
+    width: 80%;
+    margin: 2% auto;
+    direction: rtl;
+}
+
+.bigWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.step {
+    width: 70%;
+    margin: 2% auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.icons {
+    height: 250px;
+    flex: 1;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 3%;
+    justify-content: space-evenly;
+}
+
+.stepNum {
+    font-family: "Assistant";
+    font-size: 40px;
+    text-align: center;
+    color: black;
+    width: 100%;
+}
+
+.stepHeader {
+    font-family: "Assistant";
+    font-size: 40px;
+    text-align: center;
+    color: black;
+    margin: 2% auto;
+}
+
+.section {
+    font-family: "AssistantR";
+    font-size: 20px;
+    text-align: center;
+    color: black;
+    direction: rtl;
+    width: 80%;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 350px) {
+    .title {
+        font-family: "Assistant";
+        font-size: 2.2rem;
+        text-align: center;
+        color: black;
+        width: 80%;
+        margin: 5% auto;
+        direction: rtl;
+    }
+
+    .bigWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .step {
+        width: 95%;
+        margin: 7% auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .icons {
+        height: 120px;
+        flex: 1;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        flex: 1.1;
+        margin: 3%;
+    }
+
+    .stepHeader {
+        font-family: "Assistant";
+        font-size: 26px;
+        text-align: center;
+        color: black;
+        width: 100%;
+    }
+
+    .section {
+        font-family: "AssistantR";
+        font-size: 13px;
+        text-align: center;
+        color: black;
+        direction: rtl;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 350px) and (max-width: 450px) {
+    .title {
+        font-family: "Assistant";
+        font-size: 2.3rem;
+        text-align: center;
+        color: black;
+        width: 80%;
+        margin: 5% auto;
+        direction: rtl;
+    }
+
+    .bigWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .step {
+        width: 95%;
+        margin: 5% auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .icons {
+        height: 140px;
+        flex: 1;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        flex: 1.1;
+        margin: 3%;
+    }
+
+    .stepHeader {
+        font-family: "Assistant";
+        font-size: 27px;
+        text-align: center;
+        color: black;
+        width: 100%;
+    }
+
+    .section {
+        font-family: "AssistantR";
+        font-size: 13px;
+        text-align: center;
+        color: black;
+        direction: rtl;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 550px) {
+    .title {
+        font-family: "Assistant";
+        font-size: 2.8rem;
+        text-align: center;
+        color: black;
+        width: 85%;
+        margin: 5% auto;
+        direction: rtl;
+    }
+
+    .bigWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .step {
+        width: 95%;
+        margin: 5% auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .icons {
+        height: 140px;
+        flex: 1;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        flex: 1.1;
+        margin: 3%;
+    }
+
+    .stepHeader {
+        font-family: "Assistant";
+        font-size: 32px;
+        text-align: center;
+        color: black;
+        width: 100%;
+    }
+
+    .section {
+        font-family: "AssistantR";
+        font-size: 15px;
+        text-align: center;
+        color: black;
+        direction: rtl;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 650px) {
+    .title {
+        font-family: "Assistant";
+        font-size: 3.2rem;
+        text-align: center;
+        color: black;
+        width: 80%;
+        margin: 5% auto;
+        direction: rtl;
+    }
+
+    .bigWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .step {
+        width: 95%;
+        margin: 5% auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .icons {
+        height: 160px;
+        flex: 1;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        flex: 1.1;
+        margin: 3%;
+    }
+
+    .stepHeader {
+        font-family: "Assistant";
+        font-size: 36px;
+        text-align: center;
+        color: black;
+        width: 100%;
+    }
+
+    .section {
+        font-family: "AssistantR";
+        font-size: 17px;
+        text-align: center;
+        color: black;
+        direction: rtl;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 850px) {
+    .title {
+        font-family: "Assistant";
+        font-size: 3.2rem;
+        text-align: center;
+        color: black;
+        width: 85%;
+        margin: 5% auto;
+        direction: rtl;
+    }
+
+    .bigWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .step {
+        width: 85%;
+        margin: 5% auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .icons {
+        height: 160px;
+        flex: 1;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        flex: 1.1;
+        margin: 3%;
+    }
+
+    .stepHeader {
+        font-family: "Assistant";
+        font-size: 36px;
+        text-align: center;
+        color: black;
+        width: 100%;
+    }
+
+    .section {
+        font-family: "AssistantR";
+        font-size: 17px;
+        text-align: center;
+        color: black;
+        direction: rtl;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 850px) and (max-width: 1050px) {
+    .title {
+        font-family: "Assistant";
+        font-size: 3.5rem;
+        text-align: center;
+        color: black;
+        width: 60%;
+        margin: 5% auto;
+        direction: rtl;
+    }
+
+    .bigWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .step {
+        width: 85%;
+        margin: 5% auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .icons {
+        height: 160px;
+        flex: 1;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        flex: 1.1;
+        margin: 3%;
+    }
+
+    .stepHeader {
+        font-family: "Assistant";
+        font-size: 36px;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        width: 100%;
+    }
+
+    .section {
+        font-family: "AssistantR";
+        font-size: 17px;
+        text-align: center;
+        color: black;
+        direction: rtl;
+        width: 100%;
+        margin: 1% auto;
+    }
+}

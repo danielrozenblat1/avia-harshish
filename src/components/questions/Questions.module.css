@@ -1,0 +1,120 @@
+/* FAQItem.module.css */
+.faqItem {
+  margin: 1.5rem auto;
+  border: 1px solid #92A9BD;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 500px;
+  direction: rtl;
+  box-shadow: 0 4px 6px rgba(146, 169, 189, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faqItem:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(146, 169, 189, 0.15);
+}
+
+.questionButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.25rem;
+  background-color: #FFFFFF;
+  border: none;
+  text-decoration: none;
+  color: #7C99AC;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.questionButton:hover {
+  background-color: #F5F5F5;
+}
+
+.questionButton.active {
+  background-color: #92A9BD;
+  color: #FFFFFF;
+}
+
+.questionText {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 500;
+  flex-grow: 1;
+}
+
+.iconWrapper {
+  width: 24px;
+  flex-shrink: 0;
+  color: currentColor;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s ease;
+}
+
+.answerContainer {
+  overflow: hidden;
+  transition: height 0.3s ease, background-color 0.3s ease;
+  background-color: #FFFFFF;
+}
+
+.answerText {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1.1rem;
+  padding: 1.5rem;
+  color: #7C99AC;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0;
+}
+
+.answerText a, 
+.answerText strong {
+  color: #92A9BD;
+  font-weight: 600;
+}
+
+@media (max-width: 350px) {
+  .faqItem {
+    width: 280px;
+  }
+  .questionText {
+    font-size: 1rem;
+  }
+  .answerText {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 350px) and (max-width: 450px) {
+  .faqItem {
+    width: 320px;
+  }
+  .questionText {
+    font-size: 1.05rem;
+  }
+  .answerText {
+    font-size: 0.95rem;
+  }
+}
+
+@media (min-width: 450px) and (max-width: 550px) {
+  .faqItem {
+    width: 400px;
+  }
+  .questionText {
+    font-size: 1.1rem;
+  }
+  .answerText {
+    font-size: 1rem;
+  }
+}
