@@ -2,21 +2,40 @@ import React, { useState, useEffect } from 'react';
 import styles from './FirstScreen.module.css';
 import image1 from "../images/אביה הרשיש בית כנסת 1.png"
 import image2 from "../images/אביה הרשיש בית כנסת 2.png"
+import LoadingEffect from '../components/loader/Loader';  // יבוא של קומפוננטת הLoader הקיימת
 
 const FirstScreen = (props) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
   
   const images = [
     image1, image2
   ];
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % images.length);
-    }, 4000);
+    const loadImage = (imageSrc) => {
+      return new Promise((resolve, reject) => {
+        const img = new Image();
+        img.src = imageSrc;
+        img.onload = resolve;
+        img.onerror = reject;
+      });
+    };
 
-    return () => clearInterval(timer);
+    Promise.all(images.map(imageSrc => loadImage(imageSrc)))
+      .then(() => {
+        setImagesLoaded(true);
+        const timer = setInterval(() => {
+          setCurrentSlide((prev) => (prev + 1) % images.length);
+        }, 4000);
+        return () => clearInterval(timer);
+      })
+      .catch((err) => console.error("Error loading images", err));
   }, []);
+
+  if (!imagesLoaded) {
+    return <LoadingEffect />; 
+  }
 
   return (
     <div className={props.scrolled ? styles.containerP : styles.container}>

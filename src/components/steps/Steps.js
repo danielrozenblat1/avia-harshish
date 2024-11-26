@@ -99,7 +99,7 @@ const Timeline = () => {
   }, []);
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="תהליך העבודה איתי">
       <div className={styles.content}>
         <h2 className={styles.title}>
           מהתכנון ועד התוצאה ב-8 שלבים פשוטים..
