@@ -43,7 +43,6 @@ function App() {
   <Recommends/>
   <ThirdScreen/>
   <SecondScreen/>
-  
   <ByMe/>
   </>
 }
