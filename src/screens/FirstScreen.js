@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react';
 import styles from './FirstScreen.module.css';
 import image1 from "../images/אביה הרשיש בית כנסת 1.png"
 import image2 from "../images/אביה הרשיש בית כנסת 2.png"
-
+import image3 from "../images/אביה הרשיש פרוייקט 2.png"
 import LoadingEffect from '../components/loader/Loader';  // יבוא של קומפוננטת הLoader הקיימת
-
+import logo from "../images/אביה הרשיש לוגו.png"
 const FirstScreen = (props) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [imagesLoaded, setImagesLoaded] = useState(false);
-  
+
   const images = [
-    image1, image2
+    image2, image1
   ];
 
   useEffect(() => {
@@ -35,7 +35,7 @@ const FirstScreen = (props) => {
   }, []);
 
   if (!imagesLoaded) {
-    return <LoadingEffect />; 
+    return <LoadingEffect/>
   }
 
   return (
@@ -57,11 +57,16 @@ const FirstScreen = (props) => {
           </div>
           
           <div className={styles.overlayContainer}>
-            <div className={`${styles.textContainer} ${index === 0 ? styles.textContainerDark : styles.textContainerLight}`}>
-              <h1 className={`${styles.title} ${index === 0 ? styles.titleLight : styles.titleDark}`}>
-                AVIA HARSHISH
-                <span className={styles.subtitle}>ARCHITECT</span>
-              </h1>
+            <div className={`${styles.textContainer} ${
+              index === 0 ? styles.textContainerDark : styles.textContainerLight
+            }`}>
+              <div className={styles.logoContainer}>
+                <img 
+                  src={logo} 
+                  alt="אביה הרשיש" 
+                  className={styles.logo}
+                />
+              </div>
             </div>
           </div>
         </div>

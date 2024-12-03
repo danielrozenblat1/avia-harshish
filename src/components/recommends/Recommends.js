@@ -51,7 +51,7 @@ const Recommends=()=>{
         ];  
 return <>
 <div className={styles.title} id="פרוייקטים">פרוייקטים</div>
-<div className={styles.explain}>אחד הפרוייקטים שהכי נהנתי והתחברתי לעבוד עליו הוא בית כנסת והנה התוצאה : משלב  התכנון עד לשלב התוצאה</div>
+<div className={styles.explain}>החליקו ותהנו</div>
 <div className={styles.sliderContainer}>
         <Slider {...sliderSettings}>
           {content.map((item, index) => (
