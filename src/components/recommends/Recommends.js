@@ -1,8 +1,8 @@
 import styles from "./Recommends.module.css"
-import result1 from "../../images/בית כנסת חזיתות א.png"
-import result2 from "../../images/בית כנסת חזיתות ב.png"
-import result3 from "../../images/בית כנסת חתכים.png"
-import result4 from "../../images/בית כנסת קרקע.png"
+
+import result2 from "../../images/אביה הרשיש פרוייקט 4.png"
+import result3 from "../../images/אביה הרשיש פרוייקט 3.png"
+import result4 from "../../images/אביה הרשיש פרוייקט 2.png"
 import result5 from "../../images/אביה הרשיש בית כנסת תוצאה 1.png"
 import result6 from "../../images/אביה הרשיש בית כנסת תוצאה 2.png"
 import Slider from 'react-slick';
@@ -34,10 +34,7 @@ const Recommends=()=>{
           type: 'image',
           src: result6,
         },
-        {
-          type: 'image',
-          src: result1,
-        },
+   
         {
           type: 'image',
           src: result2,
@@ -53,7 +50,7 @@ const Recommends=()=>{
         
         ];  
 return <>
-<div className={styles.title} id="פרוייקט בית הכנסת">וככה זה נראה מא' עד ת'</div>
+<div className={styles.title} id="פרוייקטים">פרוייקטים</div>
 <div className={styles.explain}>אחד הפרוייקטים שהכי נהנתי והתחברתי לעבוד עליו הוא בית כנסת והנה התוצאה : משלב  התכנון עד לשלב התוצאה</div>
 <div className={styles.sliderContainer}>
         <Slider {...sliderSettings}>

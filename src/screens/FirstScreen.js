@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styles from './FirstScreen.module.css';
 import image1 from "../images/אביה הרשיש בית כנסת 1.png"
 import image2 from "../images/אביה הרשיש בית כנסת 2.png"
+
 import LoadingEffect from '../components/loader/Loader';  // יבוא של קומפוננטת הLoader הקיימת
 
 const FirstScreen = (props) => {

@@ -60,7 +60,7 @@ const ThirdScreen=()=>{
     },[])
 
     return <>
-        <div className={styles.title}>אביה, איך אדריכלית מקלה עלי?</div>
+        <div className={styles.title}>למה חשוב ליווי אדריכלי בתכנון הבית שלך</div>
 
         <div className={styles.bigWrapper}>
             <div className={styles.step} itemscope itemtype="https://schema.org/Organization">

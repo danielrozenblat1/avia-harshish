@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  align-items: center;
+  margin: 15px auto;
+  padding: 0.2rem 0.55rem;
+  border-radius: 0.5rem;
+  direction: rtl;
+  width: 320px;
+  background: rgba(255, 255, 255, 0.255);
+  backdrop-filter: blur(30px);
+  border-radius: 15px;
+  box-shadow: 
+    0 2px 5px rgba(146, 169, 189, 0.2),
+    0 -1px 5px rgba(239, 228, 220, 0.2),
+    2px 2px 5px rgba(124, 153, 172, 0.1),
+    -2px -2px 5px rgba(239, 228, 220, 0.1),
+    inset 1px 1px 2px rgba(186, 186, 186, 0.3),
+    inset -1px -1px 2px rgba(146, 169, 189, 0.2);
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+
+  box-shadow: 
+    0 2px 5px rgba(146, 169, 189, 0.25),
+    0 -1px 5px rgba(239, 228, 220, 0.25),
+    2px 2px 5px rgba(124, 153, 172, 0.15),
+    -2px -2px 5px rgba(239, 228, 220, 0.15),
+    inset 1px 1px 2px rgba(186, 186, 186, 0.35),
+    inset -1px -1px 2px rgba(146, 169, 189, 0.3);
+}
+
+.text {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1.15rem;
+  direction: rtl;
+  margin-right: 10px;
+  width: 80%;
+}
+
+.icon {
+  width: 20%;
+}
+
+@media (max-width: 350px) {
+  .container {
+    width: 270px;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .text {
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .icon {
+    width: 30%;
+    text-align: center;
+  }
+}
