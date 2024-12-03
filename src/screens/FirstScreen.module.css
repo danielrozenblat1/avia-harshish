@@ -129,13 +129,13 @@
  
  @media (max-width: 1250px) {
     .logo {
-        max-width: 180px;
+        width: 45%;
     }
  }
  
  @media (max-width: 1050px) {
     .logo {
-        max-width: 160px;
+        width: 50%;
     }
     .textContainer {
         padding: 1.4rem 2.2rem;
@@ -144,7 +144,7 @@
  
  @media (max-width: 850px) {
     .logo {
-        max-width: 140px;
+        width: 60%;
     }
     .textContainer {
         padding: 1.2rem 1.8rem;
@@ -159,7 +159,7 @@
         height: 100vh;
     }
     .logo {
-        max-width: 120px;
+        width: 70%;
     }
     .textContainer {
         padding: 1rem 1.4rem;
@@ -178,7 +178,7 @@
  
  @media (max-width: 450px) {
     .logo {
-        max-width: 100px;
+        width: 80%;
     }
     .textContainer {
         padding: 0.8rem 1rem;
