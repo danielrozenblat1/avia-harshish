@@ -99,7 +99,7 @@ const NavBarNew = () => {
           <FaInstagram />
         </a>
         <a onClick={handleClick}>
-          <FaWhatsapp />
+          <FaWhatsapp color="green" />
         </a>
       </div>
     </nav>

@@ -11,6 +11,8 @@ import SecondScreen from './screens/SecondScreen';
 import ByMe from './components/ByMe/ByMe';
 import ThirdScreen from './screens/ThirdScreen';
 import ForthScreen from './screens/ForthScreen';
+import { FloatingPhoneButton, FloatingWhatsAppButton } from './components/FloatingButtons/Floating';
+import FormScreen from './components/form/FormScreen';
 
 function App() {
   
@@ -39,13 +41,16 @@ function App() {
   <NavBarNew/>
   <FirstScreen scrolled={scrolled}/>
   <ForthScreen/>
+
   <PlayerColumns/>
   <AboutMe/>
   <Timeline/>
+
   <Recommends/>
   <ThirdScreen/>
   <SecondScreen/>
-
+  <FloatingWhatsAppButton />
+      <FloatingPhoneButton />
   <ByMe/>
   </>
 }

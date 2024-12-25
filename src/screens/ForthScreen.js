@@ -8,7 +8,7 @@ import secure from "../Icons/wired-outline-2257-gdpr-hover-pinch.json";
 import house from "../Icons/wired-outline-63-home-hover-3d-roll.json";
 import time from "../Icons/wired-outline-1334-order-history-hover-pinch.json";
 import { Home, FileQuestion, Tools, Brain, FileStack, AlertTriangle, Calculator, HelpCircle } from 'lucide-react';
-
+import FormScreen from "../components/form/FormScreen"
 const ForthScreen = () => {
     const [index, setIndex] = useState(0);
     
@@ -26,7 +26,7 @@ const ForthScreen = () => {
         return () => clearInterval(intervalId);
     }, []);
 
-    return (
+    return <>
         <div className={styles.container}>
             <div className={styles.introSection}>
                 <div className={styles.introBox}>
@@ -90,7 +90,9 @@ const ForthScreen = () => {
                 <IconTextComponent text="לחסוך לכם זמן, כסף ועוגמת נפש" icon={time} />
             </div>
         </div>
-    );
+        <div className={styles.title}>בואו נדבר</div>
+        <FormScreen />
+    </>
 };
 
 export default ForthScreen;
