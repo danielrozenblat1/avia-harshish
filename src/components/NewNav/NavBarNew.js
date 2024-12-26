@@ -99,7 +99,7 @@ const NavBarNew = () => {
           <FaInstagram />
         </a>
         <a onClick={handleClick}>
-          <FaWhatsapp color="green" />
+          <FaWhatsapp color="green" title={`https://wa.me/972522605557?text=${encodeURIComponent("היי אביה ,אני רוצה לשמוע ממך עוד על..")}`} />
         </a>
       </div>
     </nav>
