@@ -98,8 +98,8 @@ const NavBarNew = () => {
         <a href="https://www.instagram.com/avia_harshish_arch/" target="_blank" rel="noopener noreferrer">
           <FaInstagram />
         </a>
-        <a onClick={handleClick}>
-          <FaWhatsapp color="green" title={`https://wa.me/972522605557?text=${encodeURIComponent("היי אביה ,אני רוצה לשמוע ממך עוד על..")}`} />
+        <a onClick={handleClick} title={`https://wa.me/972522605557?text=${encodeURIComponent("היי אביה ,אני רוצה לשמוע ממך עוד על..")}`} style={{cursor:"pointer"}}>
+          <FaWhatsapp color="green"  />
         </a>
       </div>
     </nav>
