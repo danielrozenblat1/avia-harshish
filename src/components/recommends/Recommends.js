@@ -5,6 +5,9 @@ import result3 from "../../images/אביה הרשיש פרוייקט 3.png"
 import result4 from "../../images/אביה הרשיש פרוייקט 2.png"
 import result5 from "../../images/אביה הרשיש בית כנסת תוצאה 1.png"
 import result6 from "../../images/אביה הרשיש בית כנסת תוצאה 2.png"
+import result7 from "../../images/אביה הרשיש פרוייקט חדש.png"
+import result8 from "../../images/אביה הרשיש פרוייקט חדש 2.png"
+import result9 from "../../images/אביה הרשיש פרוייקט חדש 3.png"
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -35,7 +38,18 @@ const Recommends=()=>{
           type: 'image',
           src: result6,
         },
-   
+        {
+          type: 'image',
+          src: result7,
+        },
+        {
+          type: 'image',
+          src: result8,
+        },
+        {
+          type: 'image',
+          src: result9,
+        },
         {
           type: 'image',
           src: result2,
