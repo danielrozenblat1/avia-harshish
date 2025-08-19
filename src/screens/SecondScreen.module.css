@@ -1,0 +1,82 @@
+/* Base styles */
+.title {
+    font-size: 2.5rem;
+    direction: rtl;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    color: black;
+    justify-content: center;
+    text-align: center;
+    margin: 2% auto;
+    font-family: "Assistant";
+    font-weight: bold;
+}
+
+/* Under 350px */
+@media screen and (max-width: 349px) {
+    .title {
+        font-size: 1.5rem;
+    }
+}
+
+/* 350-450px */
+@media screen and (min-width: 350px) and (max-width: 450px) {
+    .title {
+        font-size: 1.7rem;
+    }
+}
+
+/* 450-550px */
+@media screen and (min-width: 451px) and (max-width: 550px) {
+    .title {
+        font-size: 1.9rem;
+    }
+}
+
+/* 550-650px */
+@media screen and (min-width: 551px) and (max-width: 650px) {
+    .title {
+        font-size: 2rem;
+    }
+}
+
+/* 650-750px */
+@media screen and (min-width: 651px) and (max-width: 750px) {
+    .title {
+        font-size: 2.1rem;
+    }
+}
+
+/* 750-850px */
+@media screen and (min-width: 751px) and (max-width: 850px) {
+    .title {
+        font-size: 2.2rem;
+    }
+}
+
+/* 850-950px */
+@media screen and (min-width: 851px) and (max-width: 950px) {
+    .title {
+        font-size: 2.3rem;
+    }
+}
+
+/* 950-1050px */
+@media screen and (min-width: 951px) and (max-width: 1050px) {
+    .title {
+        font-size: 2.4rem;
+    }
+}
+
+/* 1050-1150px */
+@media screen and (min-width: 1051px) and (max-width: 1150px) {
+    .title {
+        font-size: 2.45rem;
+    }
+}
+
+/* 1150-1250px */
+@media screen and (min-width: 1151px) and (max-width: 1250px) {
+    .title {
+        font-size: 2.5rem;
+    }
+}

@@ -1,0 +1,391 @@
+.container {
+  display: flex;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  gap: 40px;
+}
+
+.header {
+  font-size: 2.5rem;
+  font-family: "Assistant";
+  text-align: right;
+  margin: 15px auto;
+  color: #281916;
+  position: relative;
+  border-bottom: 1px solid #28191620;
+  padding-bottom: 12px;
+  width: fit-content;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.imageContainer {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: transform 0.5s ease;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  position: relative;
+  filter: drop-shadow(0 4px 12px rgba(40, 25, 22, 0.08));
+  transition: all 0.5s ease;
+  transform-origin: center;
+  display: block;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.image:hover {
+  filter: drop-shadow(0 6px 16px rgba(40, 25, 22, 0.12));
+  transform: translateY(-3px);
+}
+
+.content {
+  flex: 2;
+  text-align: right;
+  direction: rtl;
+  padding: 8px 30px;
+  border-radius: 2px;
+}
+
+.title {
+  font-size: 2.5em;
+  color: #281916;
+  margin-bottom: 5px;
+  font-family: "Assistant";
+  position: relative;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.subtitle {
+  font-size: 1.2em;
+  color: #281916;
+  direction: rtl;
+  text-align: right;
+  margin: 15px 0;
+  font-family: "Assistant";
+  padding-right: 15px;
+  border-right: 2px solid #28191630;
+}
+
+.description {
+  font-size: 22px;
+  line-height: 1.6;
+  margin: 12px 0;
+  font-family: "AssistantR";
+  color: #281916;
+  padding: 0 15px;
+  position: relative;
+}
+
+.description::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 8px;
+  height: 1px;
+  background: #281916;
+  opacity: 0.3;
+}
+
+.stepNum {
+  font-family: "Assistant";
+  font-size: 40px;
+  text-align: center;
+  color: black;
+  width: 100%;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.stepHeader {
+  font-family: "Assistant";
+  font-size: 40px;
+  text-align: center;
+  color: black;
+  margin: 2% auto;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.section {
+  font-family: "AssistantR";
+  font-size: 22px;
+  text-align: center;
+  color: black;
+  direction: rtl;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1050px) {
+  .container {
+    width: 90%;
+    max-width: none;
+    gap: 30px;
+  }
+  .image {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .container {
+    flex-direction: column;
+    padding: 5px;
+    gap: 15px;
+  }
+  .image {
+    margin: 1% auto;
+    width: 85%;
+    filter: drop-shadow(0 3px 10px rgba(40, 25, 22, 0.07));
+  }
+  .header {
+    font-size: 2.2rem;
+    margin: 10px auto;
+  }
+  .subtitle {
+    font-size: 1.4em;
+    width: 80%;
+    text-align: center;
+    border-right: none;
+    padding-right: 0;
+    margin: 10px 0;
+  }
+  .imageContainer {
+    padding-right: 0;
+    padding-bottom: 5px;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 15px;
+  }
+  .content {
+    text-align: center;
+    padding: 8px;
+    background: none;
+  }
+  .title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .description {
+    font-size: 15px;
+    text-align: center;
+    padding: 0;
+    margin: 8px 0;
+  }
+  .description::before {
+    display: none;
+  }
+  .section {
+    font-size: 15px;
+  }
+  .stepHeader {
+    font-size: 26px;
+  }
+}
+
+@media only screen and (min-width: 350px) and (max-width: 450px) {
+  .container {
+    flex-direction: column;
+    padding: 8px;
+    gap: 20px;
+  }
+  .image {
+    margin: 1% auto;
+    width: 90%;
+  }
+  .header {
+    font-size: 2.4rem;
+  }
+  .subtitle {
+    font-size: 1.4em;
+    text-align: center;
+    border-right: none;
+    padding-right: 0;
+  }
+  .imageContainer {
+    padding-right: 0;
+    padding-bottom: 8px;
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 15px;
+  }
+  .content {
+    text-align: center;
+    padding: 10px;
+    background: none;
+  }
+  .title {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+  .description {
+    font-size: 15px;
+    text-align: center;
+    padding: 0;
+  }
+  .description::before {
+    display: none;
+  }
+  .section {
+    font-size: 15px;
+  }
+  .stepHeader {
+    font-size: 27px;
+  }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 550px) {
+  .container {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .header {
+    font-size: 3rem;
+  }
+  .image {
+    margin: 1% auto;
+    width: 80%;
+  }
+  .imageContainer {
+    width: 60%;
+    margin: 0 auto;
+    padding-right: 0;
+    padding-bottom: 12px;
+    border-radius: 15px;
+  }
+  .content {
+    text-align: center;
+    padding: 12px;
+    background: none;
+  }
+  .title {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+  .description {
+    font-size: 17px;
+    text-align: center;
+    padding: 0;
+  }
+  .description::before {
+    display: none;
+  }
+  .subtitle {
+    text-align: center;
+    border-right: none;
+    padding-right: 0;
+  }
+  .section {
+    font-size: 17px;
+  }
+  .stepHeader {
+    font-size: 32px;
+  }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 650px) {
+  .container {
+    gap: 30px;
+  }
+  .header {
+    font-size: 3.1rem;
+  }
+  .image {
+    margin: 1% auto;
+    width: 95%;
+  }
+  .title {
+    font-size: 2.3em;
+  }
+  .description {
+    font-size: 19px;
+  }
+  .section {
+    font-size: 19px;
+  }
+  .stepHeader {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 750px) {
+  .container {
+    gap: 35px;
+  }
+  .header {
+    font-size: 3.2rem;
+  }
+  .image {
+    margin: 1% auto;
+    width: 90%;
+  }
+  .title {
+    font-size: 2.4em;
+  }
+  .description {
+    font-size: 19px;
+  }
+  .section {
+    font-size: 19px;
+  }
+  .stepHeader {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (min-width: 750px) and (max-width: 850px) {
+  .header {
+    font-size: 3.3rem;
+  }
+  .image {
+    margin: 1% auto;
+    width: 90%;
+  }
+  .description {
+    font-size: 19px;
+  }
+  .section {
+    font-size: 19px;
+  }
+  .stepHeader {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (min-width: 850px) and (max-width: 950px) {
+  .header {
+    font-size: 3.4rem;
+  }
+  .description {
+    font-size: 19px;
+  }
+  .section {
+    font-size: 19px;
+  }
+  .stepHeader {
+    font-size: 36px;
+  }
+}
+
+@media only screen and (min-width: 950px) and (max-width: 1050px) {
+  .header {
+    font-size: 3.5rem;
+  }
+  .description {
+    font-size: 19px;
+  }
+  .section {
+    font-size: 19px;
+  }
+  .stepHeader {
+    font-size: 36px;
+  }
+}

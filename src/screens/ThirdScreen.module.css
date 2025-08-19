@@ -1,0 +1,224 @@
+.title {
+    font-family: "Assistant";
+    font-size: 2.8rem;
+    text-align: center;
+    color: black;
+    width: 80%;
+    margin: 2% auto;
+    direction: rtl;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.bigWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+
+    overflow-x: hidden;
+}
+
+.step {
+    width: 70%;
+    margin: 2% auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.icons {
+    height: 250px;
+    flex: 1;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin: 3%;
+    justify-content: space-evenly;
+}
+
+.stepNum {
+    font-family: "Assistant";
+    font-size: 40px;
+    text-align: center;
+    color: black;
+    width: 100%;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.stepHeader {
+    font-family: "Assistant";
+    font-size: 40px;
+    text-align: center;
+    color: black;
+    margin: 2% auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.section {
+    font-family: "AssistantR";
+    font-size: 22px;
+    text-align: center;
+    color: black;
+    direction: rtl;
+    width: 95%;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 350px) {
+    .title {
+        font-size: 2.2rem;
+        margin: 5% auto;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .step {
+        width: 95%;
+        margin: 7% auto;
+    }
+
+    .icons {
+        height: 120px;
+    }
+
+    .stepHeader {
+        font-size: 26px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .section {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 350px) and (max-width: 450px) {
+    .title {
+        font-size: 2.3rem;
+        margin: 5% auto;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .step {
+        width: 95%;
+        margin: 5% auto;
+    }
+
+    .icons {
+        height: 140px;
+    }
+
+    .stepHeader {
+        font-size: 27px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .section {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 450px) and (max-width: 550px) {
+    .title {
+        font-size: 2.8rem;
+        margin: 5% auto;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .step {
+        width: 95%;
+        margin: 5% auto;
+    }
+
+    .icons {
+        height: 140px;
+    }
+
+    .stepHeader {
+        font-size: 32px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .section {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (min-width: 550px) and (max-width: 650px) {
+    .title {
+        font-size: 3.2rem;
+        margin: 5% auto;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .step {
+        width: 95%;
+        margin: 5% auto;
+    }
+
+    .icons {
+        height: 160px;
+    }
+
+    .stepHeader {
+        font-size: 36px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .section {
+        font-size: 19px;
+    }
+}
+
+@media only screen and (min-width: 650px) and (max-width: 850px) {
+    .title {
+        font-size: 3.2rem;
+        margin: 5% auto;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .step {
+        width: 85%;
+        margin: 5% auto;
+    }
+
+    .icons {
+        height: 160px;
+    }
+
+    .stepHeader {
+        font-size: 36px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .section {
+        font-size: 19px;
+    }
+}
+
+@media only screen and (min-width: 850px) and (max-width: 1050px) {
+    .title {
+        font-size: 3.5rem;
+        margin: 5% auto;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .step {
+        width: 85%;
+        margin: 5% auto;
+    }
+
+    .icons {
+        height: 160px;
+    }
+
+    .stepHeader {
+        font-size: 36px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .section {
+        font-size: 19px;
+    }
+}

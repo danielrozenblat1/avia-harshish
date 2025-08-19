@@ -1,0 +1,56 @@
+.loader {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: #92A8BD; /* גוון תכלת עדין מאוד */
+    transform: rotateX(65deg) rotate(45deg);
+    color: #fff;
+    animation: layers1 1s linear infinite alternate;
+  }
+  .container{
+    height: 100vh;
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loader:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.7);
+    animation: layerTr 1s linear infinite alternate;
+  }
+  
+  @keyframes layers1 {
+    0% {
+      box-shadow: 0px 0px 0 0px;
+    }
+    90%,
+    100% {
+      box-shadow: 20px 20px 0 -4px;
+    }
+  }
+  
+  @keyframes layerTr {
+    0% {
+      transform: translate(0, 0) scale(1);
+    }
+    100% {
+      transform: translate(-25px, -25px) scale(1);
+    }
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .text {
+    margin-top: 20px;
+    font-family: "AssistantR", sans-serif;
+    color: #92A8BD; /* צבע תכלת עדין לטקסט */
+    font-size: 18px;
+    direction: rtl;
+  }
