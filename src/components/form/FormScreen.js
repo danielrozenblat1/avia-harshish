@@ -9,11 +9,10 @@ const FormScreen = (props) => {
   const phoneRef = useRef('');
   const emailRef = useRef('');
   const reasonRef = useRef('');
-  const webhookUrl = "https://hook.eu2.make.com/h8noe5ahyibi2ie9i6jy9u6ir2d5v3hd";
+  // const webhookUrl = "https://hook.eu2.make.com/h8noe5ahyibi2ie9i6jy9u6ir2d5v3hd";
   const serverUrl = "https://dynamic-server-dfc88e1f1c54.herokuapp.com/leads/newLead";
   const reciver = "aviarc100@gmail.com";
 
-  // פונקציה שמונעת מהטופס להגיב על קליק בקישור
   const handlePrivacyClick = (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -22,7 +21,6 @@ const FormScreen = (props) => {
   const submitHandler = async(e) => {
       e.preventDefault();
 
-      // בדיקה אם המשתמש אישר את תנאי השימוש ומדיניות הפרטיות
       if (!agreed) {
         alert("עליך לאשר את תנאי השימוש ומדיניות הפרטיות");
         return;
@@ -50,7 +48,6 @@ const FormScreen = (props) => {
           return;
       }
    
-      // נתונים לשרת המקורי
       const serverData = {
           name: name,
           phone: phone,
@@ -59,35 +56,35 @@ const FormScreen = (props) => {
           reciver: reciver
       };
 
-      // נתונים לווב-הוק - פורמט פשוט יותר
-      const webhookData = {
-          data: {
-              name: name,
-              phone: phone,
-              email: email,
-              reason: reason
-          }
-      };
+      // נתונים לווב-הוק - מושבת זמנית
+      // const webhookData = {
+      //     data: {
+      //         name: name,
+      //         phone: phone,
+      //         email: email,
+      //         reason: reason
+      //     }
+      // };
 
       try {
-          // שליחה במקביל לשני היעדים
-          const [serverResponse, webhookResponse] = await Promise.all([
-              fetch(serverUrl, {
-                  method: "POST",
-                  headers: {'Content-Type': 'application/json'},
-                  body: JSON.stringify(serverData)
-              }),
-              fetch(webhookUrl, {
-                  method: "POST",
-                  headers: {
-                      'Content-Type': 'application/json',
-                      'Accept': 'application/json'
-                  },
-                  body: JSON.stringify(webhookData)
-              })
-          ]);
+          // שליחה לשרת בלבד - וובהוק מושבת זמנית
+          const serverResponse = await fetch(serverUrl, {
+              method: "POST",
+              headers: {'Content-Type': 'application/json'},
+              body: JSON.stringify(serverData)
+          });
 
-          if (serverResponse.ok && webhookResponse.ok) {
+          // וובהוק מושבת זמנית
+          // const webhookResponse = await fetch(webhookUrl, {
+          //     method: "POST",
+          //     headers: {
+          //         'Content-Type': 'application/json',
+          //         'Accept': 'application/json'
+          //     },
+          //     body: JSON.stringify(webhookData)
+          // });
+
+          if (serverResponse.ok) {
               alert("שמרנו את הפרטים שלך, ניצור קשר בימים הקרובים");
               nameRef.current.value = "";
               phoneRef.current.value = "";
@@ -96,7 +93,7 @@ const FormScreen = (props) => {
               setSubmitted(true);
               setAgreed(false);
           } else {
-              throw new Error('Failed to submit form to one or both endpoints');
+              throw new Error('Failed to submit form');
           }
       } catch (error) {
           alert("התרחשה שגיאה, אנא נסי שוב מאוחר יותר");
@@ -133,7 +130,6 @@ const FormScreen = (props) => {
                   rows="4"
               />
 
-              {/* תיבת האישור למדיניות הפרטיות */}
               <div style={{ 
                 display: "flex", 
                 justifyContent: "center", 
@@ -159,11 +155,11 @@ const FormScreen = (props) => {
                   קראתי את
                   <span onClick={handlePrivacyClick}>
                     <PrivacyPolicy 
-  ownerName="אביה הרשיש" 
-  email="Aviarc100@gmail.com" 
-  phone="+972 52-260-5557" 
-  domain="https://avia-arch.co.il/" 
-/>
+                      ownerName="אביה הרשיש" 
+                      email="Aviarc100@gmail.com" 
+                      phone="+972 52-260-5557" 
+                      domain="https://avia-arch.co.il/" 
+                    />
                   </span>
                   ואני מאשר/ת
                 </label>
