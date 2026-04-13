@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import NavBarNew from './components/NewNav/NavBarNew';
 import FirstScreen from './screens/FirstScreen';
@@ -11,6 +10,7 @@ import SecondScreen from './screens/SecondScreen';
 import ByMe from './components/ByMe/ByMe';
 import ThirdScreen from './screens/ThirdScreen';
 import ForthScreen from './screens/ForthScreen';
+import forthStyles from './screens/ForthScreen.module.css';
 import { FloatingPhoneButton, FloatingWhatsAppButton } from './components/FloatingButtons/Floating';
 import FormScreen from './components/form/FormScreen';
 import PrivacyPolicy from './components/privacy/Privacy';
@@ -48,6 +48,8 @@ function App() {
   <Timeline/>
 
   <Recommends/>
+  <div className={forthStyles.title}>בואו נדבר</div>
+  <FormScreen/>
   <ThirdScreen/>
   <SecondScreen/>
   <FloatingWhatsAppButton />

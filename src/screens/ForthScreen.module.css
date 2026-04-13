@@ -15,7 +15,7 @@
 }
 
 .introText, .goodNews, .notAlone, .title {
-    font-family: 'Assistant', sans-serif;
+    font-family: 'Discovery', sans-serif;
 }
 
 .description {
@@ -53,8 +53,8 @@
 }
 
 .introBox span {
-    font-size: 2.2rem;
-    font-family: 'Assistant', sans-serif;
+    font-size: 1.85rem;
+    font-family: 'Discovery', sans-serif;
     background: linear-gradient(135deg, #7D9AAC 0%, #96B0BF 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -65,85 +65,176 @@
     display: inline-block;
 }
 
-/* Concerns Container Styles */
+/* ============================================
+   Concerns - minimal luxury, no panel, no numbers
+   ============================================ */
 .concernsContainer {
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
-    margin: 2rem auto;
-    max-width: 800px;
+    gap: 0.6rem;
+    margin: 2.5rem auto 2rem;
+    max-width: 720px;
     padding: 0 1rem;
+    direction: rtl;
 }
 
 .concernItem {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    font-family: 'AssistantR', sans-serif;
-    font-size: 1.4rem;
-    color: #7D9AAC;
-    padding: 1.2rem 1.5rem;
-  
-    border-radius: 16px;
-    transition: all 0.3s ease;
+    gap: 1.4rem;
+    padding: 0.95rem 0.4rem;
     direction: rtl;
-    position: relative;
-
-    
-    overflow: hidden;
+    font-family: 'AssistantR', sans-serif;
+    color: #281916;
+    opacity: 0;
+    transform: translateY(12px);
+    animation: concernRise 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    animation-delay: var(--delay, 0ms);
+    transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.concernItem::before {
+@keyframes concernRise {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.concernItem:hover {
+    transform: translateX(-6px);
+}
+
+/* hairline underline that draws in on hover */
+.concernItem::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(125, 154, 172, 0.1), rgba(150, 176, 191, 0.1));
-    opacity: 0;
-    transition: opacity 0.3s ease;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background: linear-gradient(
+        to left,
+        rgba(125, 154, 172, 0.28) 0%,
+        rgba(125, 154, 172, 0.12) 50%,
+        transparent 100%
+    );
     pointer-events: none;
 }
 
-
-
-.concernItem:hover::before {
-    opacity: 1;
+.concernItem:last-child::after {
+    display: none;
 }
 
+/* ---- minimalist icon - no medallion, just the glyph ---- */
+.concernIconWrap {
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
 .icon {
-    min-width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     color: #7D9AAC;
-    padding: 4px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
-    box-shadow: 
-        0 2px 8px rgba(125, 154, 172, 0.2),
-        inset 0 0 4px rgba(125, 154, 172, 0.1);
-    transition: all 0.3s ease;
+    transition: color 0.4s ease, transform 0.5s ease;
 }
 
 .concernItem:hover .icon {
-    transform: scale(1.1);
-    box-shadow: 
-        0 4px 12px rgba(125, 154, 172, 0.3),
-        inset 0 0 6px rgba(125, 154, 172, 0.2);
-    background: rgba(255, 255, 255, 0.95);
+    color: #281916;
+    transform: translateY(-1px);
+}
+
+.concernItem:hover .concernIconWrap {
+    transform: scale(1.03);
+}
+
+/* ---- body text ---- */
+.concernText {
+    font-family: 'AssistantR', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #3a2a26;
+    font-weight: 300;
+    letter-spacing: 0.005em;
+    transition: color 0.4s ease, letter-spacing 0.5s ease;
+    flex: 1;
+    text-align: right;
+}
+
+.concernItem:hover .concernText {
+    color: #281916;
+    letter-spacing: 0.01em;
+}
+
+/* ---- responsive ---- */
+@media screen and (max-width: 768px) {
+    .concernsContainer {
+        gap: 0.4rem;
+        margin: 2rem auto 1.5rem;
+        max-width: 100%;
+        padding: 0 0.8rem;
+    }
+    .concernItem {
+        gap: 0.9rem;
+        padding: 0.95rem 0.4rem;
+        justify-content: center;
+    }
+    .concernIconWrap {
+        width: 34px;
+        height: 34px;
+    }
+    .icon {
+        width: 24px;
+        height: 24px;
+    }
+    .concernText {
+        font-size: 1.2rem;
+        line-height: 1.45;
+        text-align: center;
+        flex: 0 1 auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .concernItem {
+        gap: 0.7rem;
+        padding: 0.85rem 0.3rem;
+    }
+    .concernIconWrap {
+        width: 30px;
+        height: 30px;
+    }
+    .icon {
+        width: 22px;
+        height: 22px;
+    }
+    .concernText {
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
 }
 
 /* Rest of the styles */
 .row {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     margin: 2% auto;
     width: 100%;
     max-width: 1000px;
     gap: 1rem;
     padding: 0 1rem;
+    box-sizing: border-box;
 }
 
 .description {
@@ -156,16 +247,18 @@
 }
 
 .goodNews {
-    font-size: 2.3rem;
+    font-size: 1.9rem;
     color: #7D9AAC;
     margin: 2rem auto 1rem;
     font-weight: 500;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     padding: 0 1rem;
 }
 
 .notAlone {
-    font-size: 1.5rem;
+    font-size: 2.6rem;
+    font-family: 'Discovery', sans-serif;
+    font-weight: 600;
     background: linear-gradient(135deg, #7D9AAC 30%, #5d7a8d 70%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -176,7 +269,7 @@
 }
 
 .title {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     margin: 2% auto;
     font-weight: 400;
     letter-spacing: -0.02em;
@@ -202,34 +295,23 @@
 /* Media Queries */
 @media screen and (max-width: 768px) {
     .textTransition {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
-    
-    .concernItem {
-        font-size: 1.2rem;
-        padding: 0.8rem;
-        gap: 1rem;
-    }
-    
-    .icon {
-        min-width: 20px;
-        height: 20px;
-    }
-    
+
     .title {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
-    
+
     .description {
         font-size: 1.2rem;
     }
-    
+
     .goodNews {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
-    
+
     .notAlone {
-        font-size: 1.4rem;
+        font-size: 2rem;
     }
     
     .row {
@@ -239,33 +321,23 @@
 
 @media screen and (max-width: 480px) {
     .textTransition {
+        font-size: 1.25rem;
+    }
+
+    .title {
         font-size: 1.5rem;
     }
-    
-    .concernItem {
-        font-size: 1.1rem;
-        padding: 0.6rem;
-    }
-    
-    .icon {
-        min-width: 18px;
-        height: 18px;
-    }
-    
-    .title {
-        font-size: 1.8rem;
-    }
-    
+
     .description {
         font-size: 1.1rem;
     }
-    
+
     .goodNews {
-        font-size: 1.6rem;
+        font-size: 1.35rem;
     }
-    
+
     .notAlone {
-        font-size: 1.3rem;
+        font-size: 1.7rem;
     }
     
     .row {

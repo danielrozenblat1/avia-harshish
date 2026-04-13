@@ -2,46 +2,77 @@
   display: flex;
   align-items: center;
   margin: 15px auto;
+  margin-inline: auto;
   padding: 0.2rem 0.55rem;
-  border-radius: 0.5rem;
   direction: rtl;
   width: 320px;
-  background: rgba(255, 255, 255, 0.255);
-  backdrop-filter: blur(30px);
+  max-width: calc(100% - 24px);
+  box-sizing: border-box;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
   border-radius: 15px;
-  box-shadow: 
-    0 2px 5px rgba(146, 169, 189, 0.2),
-    0 -1px 5px rgba(239, 228, 220, 0.2),
-    2px 2px 5px rgba(124, 153, 172, 0.1),
-    -2px -2px 5px rgba(239, 228, 220, 0.1),
-    inset 1px 1px 2px rgba(186, 186, 186, 0.3),
-    inset -1px -1px 2px rgba(146, 169, 189, 0.2);
-  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 4px 14px -8px rgba(125, 154, 172, 0.28),
+    0 2px 6px -3px rgba(146, 169, 189, 0.2);
+  transition:
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.5s ease,
+    border-color 0.5s ease,
+    background 0.5s ease;
 }
 
 .container:hover {
-
-  box-shadow: 
-    0 2px 5px rgba(146, 169, 189, 0.25),
-    0 -1px 5px rgba(239, 228, 220, 0.25),
-    2px 2px 5px rgba(124, 153, 172, 0.15),
-    -2px -2px 5px rgba(239, 228, 220, 0.15),
-    inset 1px 1px 2px rgba(186, 186, 186, 0.35),
-    inset -1px -1px 2px rgba(146, 169, 189, 0.3);
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.7);
+  border-color: rgba(255, 255, 255, 0.95);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.95) inset,
+    0 6px 18px -10px rgba(125, 154, 172, 0.32),
+    0 3px 8px -4px rgba(146, 169, 189, 0.25);
 }
 
 .text {
   font-family: 'AssistantR', sans-serif;
-  font-size: 1.15rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #281916;
   direction: rtl;
   margin-right: 10px;
   width: 80%;
+  letter-spacing: 0.005em;
+  position: relative;
+  z-index: 1;
+  transition: color 0.4s ease, letter-spacing 0.5s ease;
+}
+
+.container:hover .text {
+  color: #1a0f09;
+  letter-spacing: 0.012em;
 }
 
 .icon {
   width: 20%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+.container:hover .icon {
+  transform: scale(1.04);
+}
+
+/* ---- responsive (original proportions) ---- */
 @media (max-width: 350px) {
   .container {
     width: 270px;
@@ -50,7 +81,7 @@
 
   .text {
     width: 100%;
-    font-size: 1rem;
+    font-size: 0.9rem;
     margin-bottom: 0.5rem;
   }
 

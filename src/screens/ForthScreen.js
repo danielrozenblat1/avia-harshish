@@ -7,7 +7,7 @@ import money from "../Icons/wired-outline-298-coins-hover-jump.json";
 import secure from "../Icons/wired-outline-2257-gdpr-hover-pinch.json";
 import house from "../Icons/wired-outline-63-home-hover-3d-roll.json";
 import time from "../Icons/wired-outline-1334-order-history-hover-pinch.json";
-import { Home, FileQuestion, Tools, Brain, FileStack, AlertTriangle, Calculator, HelpCircle } from 'lucide-react';
+import { Home, FileQuestion, Brain, Calculator, HelpCircle } from 'lucide-react';
 import FormScreen from "../components/form/FormScreen"
 const ForthScreen = () => {
     const [index, setIndex] = useState(0);
@@ -41,29 +41,39 @@ const ForthScreen = () => {
             </div>
 
             <div className={styles.concernsContainer}>
-                <div className={styles.concernItem}>
-                    <Brain className={styles.icon} />
-                    <span>מרגישים מוצפים מכמות ההחלטות שצריך לקבל?</span>
+                <div className={styles.concernItem} style={{ '--delay': '0ms' }}>
+                    <div className={styles.concernIconWrap}>
+                        <Brain className={styles.icon} strokeWidth={1.2} />
+                    </div>
+                    <span className={styles.concernText}>מרגישים מוצפים מכמות ההחלטות שצריך לקבל?</span>
                 </div>
-                
-                <div className={styles.concernItem}>
-                    <Calculator className={styles.icon} />
-                    <span>חוששים מטעויות שיעלו לכם עשרות אלפי שקלים?</span>
+
+                <div className={styles.concernItem} style={{ '--delay': '90ms' }}>
+                    <div className={styles.concernIconWrap}>
+                        <Calculator className={styles.icon} strokeWidth={1.2} />
+                    </div>
+                    <span className={styles.concernText}>חוששים מטעויות שיעלו לכם עשרות אלפי שקלים?</span>
                 </div>
-                
-                <div className={styles.concernItem}>
-                    <Home className={styles.icon} />
-                    <span>מפחדים שהבית לא יראה כמו שדמיינתם?</span>
+
+                <div className={styles.concernItem} style={{ '--delay': '180ms' }}>
+                    <div className={styles.concernIconWrap}>
+                        <Home className={styles.icon} strokeWidth={1.2} />
+                    </div>
+                    <span className={styles.concernText}>מפחדים שהבית לא יראה כמו שדמיינתם?</span>
                 </div>
-                
-                <div className={styles.concernItem}>
-                    <FileQuestion className={styles.icon} />
-                    <span>לא בטוחים איך להתנהל מול הקבלן?</span>
+
+                <div className={styles.concernItem} style={{ '--delay': '270ms' }}>
+                    <div className={styles.concernIconWrap}>
+                        <FileQuestion className={styles.icon} strokeWidth={1.2} />
+                    </div>
+                    <span className={styles.concernText}>לא בטוחים איך להתנהל מול הקבלן?</span>
                 </div>
-                
-                <div className={styles.concernItem}>
-                    <HelpCircle className={styles.icon} />
-                    <span>מבולבלים מכל המושגים המקצועיים?</span>
+
+                <div className={styles.concernItem} style={{ '--delay': '360ms' }}>
+                    <div className={styles.concernIconWrap}>
+                        <HelpCircle className={styles.icon} strokeWidth={1.2} />
+                    </div>
+                    <span className={styles.concernText}>מבולבלים מכל המושגים המקצועיים?</span>
                 </div>
             </div>
 

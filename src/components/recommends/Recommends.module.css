@@ -41,15 +41,15 @@
 }
 
 .title {
-  font-size: 3.5rem;
+  font-size: 2.9rem;
   direction: rtl;
   width: 65%;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
   color: black;
   justify-content: center;
   text-align: center;
   margin: 2% auto;
-  font-family: "Assistant";
+  font-family: "Discovery";
   font-weight: bold;
 }
 
@@ -68,7 +68,7 @@
 /* Under 350px */
 @media only screen and (max-width: 350px) {
   .title {
-    font-size: 2rem;
+    font-size: 1.6rem;
     width: 85%;
     margin: 3% auto;
   }
@@ -88,7 +88,7 @@
 /* 350px - 450px */
 @media only screen and (min-width: 350px) and (max-width: 450px) {
   .title {
-    font-size: 2rem;
+    font-size: 1.7rem;
     width: 75%;
     margin: 2% auto;
   }
@@ -108,7 +108,7 @@
 /* 450px - 550px */
 @media only screen and (min-width: 450px) and (max-width: 550px) {
   .title {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     width: 85%;
     margin: 2% auto;
   }
@@ -128,7 +128,7 @@
 /* 550px - 650px */
 @media only screen and (min-width: 550px) and (max-width: 650px) {
   .title {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     width: 85%;
     margin: 2% auto;
   }
@@ -148,7 +148,7 @@
 /* 650px - 750px */
 @media only screen and (min-width: 650px) and (max-width: 750px) {
   .title {
-    font-size: 2.5rem;
+    font-size: 2.1rem;
     width: 85%;
     margin: 2% auto;
   }
@@ -168,7 +168,7 @@
 /* 750px - 850px */
 @media only screen and (min-width: 750px) and (max-width: 850px) {
   .title {
-    font-size: 2.8rem;
+    font-size: 2.3rem;
     width: 75%;
     margin: 2% auto;
   }
@@ -188,7 +188,7 @@
 /* 850px - 950px */
 @media only screen and (min-width: 850px) and (max-width: 950px) {
   .title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     width: 85%;
     margin: 2% auto;
   }
@@ -208,7 +208,7 @@
 /* 950px - 1050px */
 @media only screen and (min-width: 950px) and (max-width: 1050px) {
   .title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     width: 75%;
     margin: 2% auto;
   }
@@ -228,7 +228,7 @@
 /* 1050px and above */
 @media only screen and (min-width: 1050px) {
   .title {
-    font-size: 3.5rem;
+    font-size: 2.9rem;
     width: 75%;
     margin: 2% auto;
   }

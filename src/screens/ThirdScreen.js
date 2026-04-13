@@ -63,53 +63,53 @@ const ThirdScreen=()=>{
         <div className={styles.title}>למה חשוב ליווי אדריכלי בתכנון הבית שלך</div>
 
         <div className={styles.bigWrapper}>
-            <div className={styles.step} itemscope itemtype="https://schema.org/Organization">
+            <div className={styles.step} itemScope itemType="https://schema.org/Organization">
                 <div className={styles.icons}>
                     <Player ref={playerRef1} size="100%" onComplete={() => playerRef1.current?.playFromBeginning()} icon={wrong} />
                 </div>
                 <div className={styles.text}>
-                    <div className={styles.stepHeader} itemprop="name">מניעה מטעויות יקרות</div>
-                    <div className={styles.section} itemprop="description">ליווי מקצועי מונע טעויות תכנון יקרות ומיותרות. אני מזהה בעיות פוטנציאליות מראש ומציעה פתרונות חכמים שחוסכים זמן וכסף בטווח הארוך</div>
+                    <div className={styles.stepHeader} itemProp="name">מניעה מטעויות יקרות</div>
+                    <div className={styles.section} itemProp="description">ליווי מקצועי מונע טעויות תכנון יקרות ומיותרות. אני מזהה בעיות פוטנציאליות מראש ומציעה פתרונות חכמים שחוסכים זמן וכסף בטווח הארוך</div>
                 </div>
             </div>
 
-            <div className={styles.step} itemscope itemtype="https://schema.org/Product">
+            <div className={styles.step} itemScope itemType="https://schema.org/Product">
                 <div className={styles.text}>
-                    <div className={styles.stepHeader} itemprop="name">בירוקרטיות מול הרשויות</div>
-                    <div className={styles.section} itemprop="description">מלווה אתכם בכל התהליכים הבירוקרטיים מול הרשויות. מטפלת בהיתרים, אישורים ותיאומים נדרשים כדי להבטיח שהפרויקט יתקדם בצורה חלקה ועל פי החוק</div>
+                    <div className={styles.stepHeader} itemProp="name">בירוקרטיות מול הרשויות</div>
+                    <div className={styles.section} itemProp="description">מלווה אתכם בכל התהליכים הבירוקרטיים מול הרשויות. מטפלת בהיתרים, אישורים ותיאומים נדרשים כדי להבטיח שהפרויקט יתקדם בצורה חלקה ועל פי החוק</div>
                 </div>
                 <div className={styles.icons}>
                     <Player ref={playerRef2} delay={500} size="100%" onComplete={() => playerRef2.current?.playFromBeginning()} icon={birocration} />
                 </div>
             </div>
 
-            <div className={styles.step} itemscope itemtype="https://schema.org/Organization">
+            <div className={styles.step} itemScope itemType="https://schema.org/Organization">
                 <div className={styles.icons}>
                     <Player ref={playerRef3} size="100%" onComplete={() =>playerRef3.current?.playFromBeginning()} icon={organize} />
                 </div>
                 <div className={styles.text}>
-                    <div className={styles.stepHeader} itemprop="name">תכנון וסדר</div>
-                    <div className={styles.section} itemprop="description">יוצרת תכנון מדויק ומסודר של החלל שלכם. מתייחסת לכל הפרטים הקטנים כדי ליצור מרחב פונקציונלי ואסתטי שמתאים בדיוק לצרכים ולסגנון החיים שלכם</div>
+                    <div className={styles.stepHeader} itemProp="name">תכנון וסדר</div>
+                    <div className={styles.section} itemProp="description">יוצרת תכנון מדויק ומסודר של החלל שלכם. מתייחסת לכל הפרטים הקטנים כדי ליצור מרחב פונקציונלי ואסתטי שמתאים בדיוק לצרכים ולסגנון החיים שלכם</div>
                 </div>
             </div>
 
-            <div className={styles.step} itemscope itemtype="https://schema.org/Organization">
+            <div className={styles.step} itemScope itemType="https://schema.org/Organization">
                 <div className={styles.text}>
-                    <div className={styles.stepHeader} itemprop="name">ליווי בכל התהליך</div>
-                    <div className={styles.section} itemprop="description">מלווה אתכם צעד אחר צעד לאורך כל הדרך. מהתכנון הראשוני ועד לביצוע הסופי, אני כאן כדי לייעץ, להדריך ולוודא שהתוצאה הסופית תהיה בדיוק כפי שחלמתם</div>
+                    <div className={styles.stepHeader} itemProp="name">ליווי בכל התהליך</div>
+                    <div className={styles.section} itemProp="description">מלווה אתכם צעד אחר צעד לאורך כל הדרך. מהתכנון הראשוני ועד לביצוע הסופי, אני כאן כדי לייעץ, להדריך ולוודא שהתוצאה הסופית תהיה בדיוק כפי שחלמתם</div>
                 </div>
                 <div className={styles.icons}>
                     <Player ref={playerRef4} delay={500} size="100%" onComplete={() => playerRef4.current?.playFromBeginning()} icon={withyou} />
                 </div>
             </div>
 
-            <div className={styles.step} itemscope itemtype="https://schema.org/Course">
+            <div className={styles.step} itemScope itemType="https://schema.org/Course">
                 <div className={styles.icons}>
                     <Player ref={playerRef5} size="100%" onComplete={() => playerRef5.current?.playFromBeginning()} icon={money} />
                 </div>
                 <div className={styles.text}>
-                    <div className={styles.stepHeader} itemprop="name">חיסכון בזמן וכסף</div>
-                    <div className={styles.section} itemprop="description">ניסיון מקצועי וידע נרחב מאפשרים לי לחסוך לכם זמן וכסף יקרים. אני מייעלת את התהליך ומונעת טעויות יקרות שעלולות להתגלות מאוחר יותר</div>
+                    <div className={styles.stepHeader} itemProp="name">חיסכון בזמן וכסף</div>
+                    <div className={styles.section} itemProp="description">ניסיון מקצועי וידע נרחב מאפשרים לי לחסוך לכם זמן וכסף יקרים. אני מייעלת את התהליך ומונעת טעויות יקרות שעלולות להתגלות מאוחר יותר</div>
                 </div>
             </div>
         </div>

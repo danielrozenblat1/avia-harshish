@@ -1,391 +1,664 @@
-.container {
+/* ========================================
+   CSS Variables - Avia Palette
+======================================== */
+:root {
+  --avia-dark: #281916;
+  --avia-white: #ffffff;
+  --avia-cream: #f5efe8;
+  --avia-blue: #7D9AAC;
+  --avia-blue-dark: #5d7a8d;
+  --avia-blue-light: #96B0BF;
+  --avia-beige: #ede4d9;
+}
+
+/* ========================================
+   Scroll Reveal Animations
+======================================== */
+.fadeInUp {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fadeInUp.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fadeInLeft {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fadeInLeft.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.fadeInRight {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fadeInRight.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ========================================
+   Profile Section - Main Container
+======================================== */
+.profileSection {
+  position: relative;
+  min-height: 100vh;
+  background: #fbfaf8;
+  direction: rtl;
+  font-family: 'AssistantR', sans-serif;
   display: flex;
-  align-items: center;
-  max-width: 1000px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 10px 20px;
-  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 80px 40px;
+  overflow: clip;
 }
 
-.header {
-  font-size: 2.5rem;
-  font-family: "Assistant";
-  text-align: right;
-  margin: 15px auto;
-  color: #281916;
-  position: relative;
-  border-bottom: 1px solid #28191620;
-  padding-bottom: 12px;
-  width: fit-content;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-.imageContainer {
-  flex: 1;
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
-  transition: transform 0.5s ease;
-}
-
-.image {
-  width: 100%;
-  height: auto;
-  position: relative;
-  filter: drop-shadow(0 4px 12px rgba(40, 25, 22, 0.08));
-  transition: all 0.5s ease;
-  transform-origin: center;
-  display: block;
-  object-fit: cover;
-  border-radius: 20px;
-}
-
-.image:hover {
-  filter: drop-shadow(0 6px 16px rgba(40, 25, 22, 0.12));
-  transform: translateY(-3px);
-}
-
-.content {
-  flex: 2;
-  text-align: right;
-  direction: rtl;
-  padding: 8px 30px;
-  border-radius: 2px;
-}
-
-.title {
-  font-size: 2.5em;
-  color: #281916;
-  margin-bottom: 5px;
-  font-family: "Assistant";
-  position: relative;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-.subtitle {
-  font-size: 1.2em;
-  color: #281916;
-  direction: rtl;
-  text-align: right;
-  margin: 15px 0;
-  font-family: "Assistant";
-  padding-right: 15px;
-  border-right: 2px solid #28191630;
-}
-
-.description {
-  font-size: 22px;
-  line-height: 1.6;
-  margin: 12px 0;
-  font-family: "AssistantR";
-  color: #281916;
-  padding: 0 15px;
-  position: relative;
-}
-
-.description::before {
+.profileSection::before {
   content: '';
   position: absolute;
-  right: 0;
-  top: 50%;
-  width: 8px;
-  height: 1px;
-  background: #281916;
-  opacity: 0.3;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 15% 85%, rgba(125, 154, 172, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 85% 15%, rgba(125, 154, 172, 0.04) 0%, transparent 45%);
+  pointer-events: none;
+  z-index: 1;
 }
 
-.stepNum {
-  font-family: "Assistant";
-  font-size: 40px;
-  text-align: center;
-  color: black;
+/* ========================================
+   Decorative Corners
+======================================== */
+.decorCorner {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 1px solid var(--avia-blue);
+  opacity: 0.22;
+  z-index: 2;
+}
+
+.topRight {
+  top: 40px;
+  right: 40px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.bottomLeft {
+  bottom: 40px;
+  left: 40px;
+  border-right: none;
+  border-top: none;
+}
+
+/* ========================================
+   Container
+======================================== */
+.container {
+  position: relative;
+  z-index: 10;
+  max-width: 1400px;
   width: 100%;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 100px;
+  align-items: start;
 }
 
-.stepHeader {
-  font-family: "Assistant";
-  font-size: 40px;
-  text-align: center;
-  color: black;
-  margin: 2% auto;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+/* ========================================
+   Left Column - Image (visually LEFT in RTL via grid-column)
+======================================== */
+.leftColumn {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  grid-column: 2;
+  align-self: start;
+  height: fit-content;
+  position: sticky;
+  top: 120px;
 }
 
-.section {
-  font-family: "AssistantR";
-  font-size: 22px;
-  text-align: center;
-  color: black;
-  direction: rtl;
-  width: 80%;
-  margin: 0 auto;
+.imageSection {
+  width: 100%;
+  max-width: 480px;
+  position: relative;
 }
 
-/* Media Queries */
-@media only screen and (max-width: 1050px) {
+.imageFrame {
+  position: relative;
+  padding: 15px;
+  background: linear-gradient(145deg, #ffffff 0%, #f2ece4 100%);
+  border-radius: 4px;
+  box-shadow:
+    0 5px 30px rgba(40, 25, 22, 0.08),
+    0 2px 10px rgba(125, 154, 172, 0.1);
+}
+
+.imageFrame::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(125, 154, 172, 0.15);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.imageFrame::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: -8px;
+  width: 60px;
+  height: 60px;
+  border-left: 1px solid rgba(125, 154, 172, 0.25);
+  border-bottom: 1px solid rgba(125, 154, 172, 0.25);
+}
+
+.profileImage {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+  background: var(--avia-cream);
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.profilePhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.imageSection:hover .profilePhoto {
+  transform: scale(1.02);
+}
+
+/* ========================================
+   Right Column - Content (visually RIGHT in RTL via grid-column)
+======================================== */
+.rightColumn {
+  display: flex;
+  align-items: flex-start;
+  grid-column: 1;
+}
+
+.textSection {
+  max-width: 800px;
+}
+
+/* ========================================
+   Header Section
+======================================== */
+.headerSection {
+  margin-bottom: 45px;
+}
+
+.greeting {
+  display: block;
+  font-family: 'Discovery', serif;
+  font-size: clamp(15px, 1.6vw, 18px);
+  font-weight: 400;
+  color: var(--avia-blue-dark);
+  margin-bottom: 8px;
+  opacity: 0.9;
+  letter-spacing: 0.02em;
+}
+
+.name {
+  font-family: 'Discovery', sans-serif;
+  font-size: clamp(30px, 3.7vw, 42px);
+  font-weight: 700;
+  color: var(--avia-dark);
+  margin: 0 0 25px 0;
+  line-height: 1.15;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.quoteLine {
+  width: 60px;
+  height: 2px;
+  background: var(--avia-blue);
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.quote {
+  font-family: 'Discovery', serif;
+  font-size: clamp(16px, 2vw, 21px);
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--avia-dark);
+  margin: 0;
+  max-width: 600px;
+}
+
+/* ========================================
+   Story
+======================================== */
+.story {
+  font-family: 'AssistantR', sans-serif;
+  font-size: clamp(16px, 1.6vw, 19px);
+  font-weight: 300;
+  line-height: 2;
+  color: var(--avia-dark);
+  margin-bottom: 45px;
+}
+
+.story p {
+  margin-bottom: 0;
+  opacity: 0.92;
+}
+
+.closingLine {
+  text-align: right;
+  margin-top: 30px !important;
+  padding-top: 25px;
+  border-top: 1px solid rgba(125, 154, 172, 0.2);
+  font-size: clamp(17px, 1.8vw, 21px) !important;
+  opacity: 1 !important;
+}
+
+/* Regular highlight */
+.highlight {
+  color: var(--avia-blue-dark);
+  font-weight: 500;
+}
+
+/* Strong highlight for key phrases */
+.highlightStrong {
+  color: var(--avia-dark);
+  font-weight: 700;
+  font-family: 'Discovery', sans-serif;
+}
+
+/* ========================================
+   Elegant Divider Between Paragraphs (Desktop)
+======================================== */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 35px 0;
+  position: relative;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(125, 154, 172, 0.25) 50%,
+    transparent 100%
+  );
+}
+
+.divider::before {
+  margin-left: 20px;
+}
+
+.divider::after {
+  margin-right: 20px;
+}
+
+.dividerDot {
+  width: 5px;
+  height: 5px;
+  background: var(--avia-blue);
+  border-radius: 50%;
+  opacity: 0.5;
+  position: relative;
+}
+
+.dividerDot::before,
+.dividerDot::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: var(--avia-blue);
+  border-radius: 50%;
+  opacity: 0.3;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.dividerDot::before {
+  right: 12px;
+}
+
+.dividerDot::after {
+  left: 12px;
+}
+
+/* ========================================
+   Parallax Divider (Mobile Only) - Hidden on Desktop
+======================================== */
+.parallaxDivider {
+  display: none;
+}
+
+.parallaxImage {
+  display: none;
+}
+
+.parallaxOverlay {
+  display: none;
+}
+
+/* ========================================
+   CTA Button
+======================================== */
+.ctaContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.ctaButton {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 45px;
+  background: var(--avia-blue-dark);
+  border: none;
+  font-family: 'Discovery', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: var(--avia-white);
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaButton::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--avia-dark);
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+
+.ctaButton:hover::before {
+  transform: translateX(0);
+}
+
+.ctaButton span,
+.ctaButton svg {
+  position: relative;
+  z-index: 1;
+}
+
+.ctaArrow {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+  transform: rotate(180deg);
+}
+
+.ctaButton:hover .ctaArrow {
+  transform: rotate(180deg) translateX(5px);
+}
+
+/* ========================================
+   Responsive - Large Screens
+======================================== */
+@media (max-width: 1400px) {
   .container {
-    width: 90%;
-    max-width: none;
-    gap: 30px;
+    grid-template-columns: 1fr 420px;
+    gap: 70px;
   }
-  .image {
+
+  .imageSection {
+    max-width: 420px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    grid-template-columns: 1fr 380px;
+    gap: 50px;
+  }
+
+  .imageSection {
+    max-width: 380px;
+  }
+}
+
+/* ========================================
+   Responsive - Tablet & Mobile (Parallax Active)
+======================================== */
+@media (max-width: 1024px) {
+  .profileSection {
+    padding: 60px 30px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+    text-align: center;
+  }
+
+  .leftColumn {
+    order: 1;
+    grid-column: auto;
+    position: static;
+    top: auto;
+    align-items: center;
+    align-self: auto;
+  }
+
+  .rightColumn {
+    order: 2;
+    justify-content: center;
+    grid-column: auto;
+    align-items: center;
+  }
+
+  .imageSection {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .imageFrame::after {
+    display: none;
+  }
+
+  .textSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .headerSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quote {
+    text-align: center;
+  }
+
+  .closingLine {
+    text-align: center;
+  }
+
+  .ctaContainer {
     justify-content: center;
   }
-}
 
-@media only screen and (max-width: 350px) {
-  .container {
-    flex-direction: column;
-    padding: 5px;
-    gap: 15px;
-  }
-  .image {
-    margin: 1% auto;
-    width: 85%;
-    filter: drop-shadow(0 3px 10px rgba(40, 25, 22, 0.07));
-  }
-  .header {
-    font-size: 2.2rem;
-    margin: 10px auto;
-  }
-  .subtitle {
-    font-size: 1.4em;
-    width: 80%;
-    text-align: center;
-    border-right: none;
-    padding-right: 0;
-    margin: 10px 0;
-  }
-  .imageContainer {
-    padding-right: 0;
-    padding-bottom: 5px;
-    width: 90%;
-    margin: 0 auto;
-    border-radius: 15px;
-  }
-  .content {
-    text-align: center;
-    padding: 8px;
-    background: none;
-  }
-  .title {
-    font-size: 1.8rem;
-    text-align: center;
-  }
-  .description {
-    font-size: 15px;
-    text-align: center;
-    padding: 0;
-    margin: 8px 0;
-  }
-  .description::before {
+  .decorCorner {
     display: none;
   }
-  .section {
-    font-size: 15px;
+
+  /* Hide regular divider on mobile */
+  .divider {
+    display: none;
   }
-  .stepHeader {
-    font-size: 26px;
+
+  /* ========================================
+     Parallax Divider - Active on Mobile
+  ======================================== */
+  .parallaxDivider {
+    display: block;
+    position: relative;
+    width: calc(100% + 60px);
+    margin: 40px -30px;
+    height: 220px;
+    overflow: hidden;
+  }
+
+  .parallaxImage {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 140%;
+    top: -20%;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.1s linear;
+    will-change: transform;
+  }
+
+  .parallaxOverlay {
+    display: block;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(251, 250, 248, 0.35) 0%,
+      rgba(40, 25, 22, 0.1) 50%,
+      rgba(251, 250, 248, 0.35) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
   }
 }
 
-@media only screen and (min-width: 350px) and (max-width: 450px) {
+/* ========================================
+   Responsive - Mobile
+======================================== */
+@media (max-width: 768px) {
+  .profileSection {
+    padding: 50px 20px;
+  }
+
   .container {
-    flex-direction: column;
-    padding: 8px;
-    gap: 20px;
+    gap: 40px;
   }
-  .image {
-    margin: 1% auto;
-    width: 90%;
+
+  .imageSection {
+    max-width: 300px;
   }
-  .header {
-    font-size: 2.4rem;
-  }
-  .subtitle {
-    font-size: 1.4em;
-    text-align: center;
-    border-right: none;
-    padding-right: 0;
-  }
-  .imageContainer {
-    padding-right: 0;
-    padding-bottom: 8px;
-    width: 90%;
-    margin: 0 auto;
-    border-radius: 15px;
-  }
-  .content {
-    text-align: center;
+
+  .imageFrame {
     padding: 10px;
-    background: none;
   }
-  .title {
-    font-size: 2.2rem;
-    text-align: center;
+
+  .greeting {
+    font-size: clamp(14px, 3.5vw, 16px);
   }
-  .description {
+
+  .name {
+    font-size: clamp(25px, 6vw, 33px);
+    margin-bottom: 20px;
+  }
+
+  .quoteLine {
+    width: 50px;
+    margin-bottom: 15px;
+  }
+
+  .quote {
+    font-size: clamp(14px, 3.8vw, 17px);
+  }
+
+  .headerSection {
+    margin-bottom: 35px;
+  }
+
+  .story {
+    font-size: clamp(15px, 4vw, 17px);
+    margin-bottom: 35px;
+  }
+
+  .closingLine {
+    font-size: clamp(16px, 4.2vw, 19px) !important;
+  }
+
+  .ctaButton {
+    padding: 16px 35px;
     font-size: 15px;
-    text-align: center;
-    padding: 0;
   }
-  .description::before {
-    display: none;
-  }
-  .section {
-    font-size: 15px;
-  }
-  .stepHeader {
-    font-size: 27px;
+
+  .parallaxDivider {
+    width: calc(100% + 40px);
+    margin: 35px -20px;
+    height: 200px;
   }
 }
 
-@media only screen and (min-width: 450px) and (max-width: 550px) {
-  .container {
-    flex-direction: column;
-    gap: 25px;
+/* ========================================
+   Responsive - Small Mobile
+======================================== */
+@media (max-width: 480px) {
+  .profileSection {
+    padding: 40px 15px;
   }
-  .header {
-    font-size: 3rem;
-  }
-  .image {
-    margin: 1% auto;
-    width: 80%;
-  }
-  .imageContainer {
-    width: 60%;
-    margin: 0 auto;
-    padding-right: 0;
-    padding-bottom: 12px;
-    border-radius: 15px;
-  }
-  .content {
-    text-align: center;
-    padding: 12px;
-    background: none;
-  }
-  .title {
-    font-size: 2.4rem;
-    text-align: center;
-  }
-  .description {
-    font-size: 17px;
-    text-align: center;
-    padding: 0;
-  }
-  .description::before {
-    display: none;
-  }
-  .subtitle {
-    text-align: center;
-    border-right: none;
-    padding-right: 0;
-  }
-  .section {
-    font-size: 17px;
-  }
-  .stepHeader {
-    font-size: 32px;
-  }
-}
 
-@media only screen and (min-width: 550px) and (max-width: 650px) {
   .container {
     gap: 30px;
   }
-  .header {
-    font-size: 3.1rem;
-  }
-  .image {
-    margin: 1% auto;
-    width: 95%;
-  }
-  .title {
-    font-size: 2.3em;
-  }
-  .description {
-    font-size: 19px;
-  }
-  .section {
-    font-size: 19px;
-  }
-  .stepHeader {
-    font-size: 36px;
-  }
-}
 
-@media only screen and (min-width: 650px) and (max-width: 750px) {
-  .container {
-    gap: 35px;
+  .imageSection {
+    max-width: 260px;
   }
-  .header {
-    font-size: 3.2rem;
-  }
-  .image {
-    margin: 1% auto;
-    width: 90%;
-  }
-  .title {
-    font-size: 2.4em;
-  }
-  .description {
-    font-size: 19px;
-  }
-  .section {
-    font-size: 19px;
-  }
-  .stepHeader {
-    font-size: 36px;
-  }
-}
 
-@media only screen and (min-width: 750px) and (max-width: 850px) {
-  .header {
-    font-size: 3.3rem;
+  .imageFrame {
+    padding: 8px;
   }
-  .image {
-    margin: 1% auto;
-    width: 90%;
-  }
-  .description {
-    font-size: 19px;
-  }
-  .section {
-    font-size: 19px;
-  }
-  .stepHeader {
-    font-size: 36px;
-  }
-}
 
-@media only screen and (min-width: 850px) and (max-width: 950px) {
-  .header {
-    font-size: 3.4rem;
+  .greeting {
+    font-size: 13px;
   }
-  .description {
-    font-size: 19px;
-  }
-  .section {
-    font-size: 19px;
-  }
-  .stepHeader {
-    font-size: 36px;
-  }
-}
 
-@media only screen and (min-width: 950px) and (max-width: 1050px) {
-  .header {
-    font-size: 3.5rem;
+  .name {
+    font-size: clamp(22px, 5.2vw, 27px);
   }
-  .description {
-    font-size: 19px;
+
+  .quote {
+    font-size: clamp(14px, 3.5vw, 16px);
   }
-  .section {
-    font-size: 19px;
+
+  .ctaButton {
+    padding: 14px 30px;
+    font-size: 14px;
+    width: 100%;
+    justify-content: center;
   }
-  .stepHeader {
-    font-size: 36px;
+
+  .parallaxDivider {
+    width: calc(100% + 30px);
+    margin: 30px -15px;
+    height: 180px;
   }
 }

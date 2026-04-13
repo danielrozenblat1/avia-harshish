@@ -16,8 +16,8 @@
     color: rgb(64, 45, 21);
   }
   .title{
-    font-size:2.5rem;
-    font-family: "Assistant";
+    font-size:2.1rem;
+    font-family: "Discovery";
     text-align: center;
     margin:3% auto;
     direction:rtl;
@@ -50,8 +50,8 @@
         color: rgb(64, 45, 21);
       }
       .title{
-        font-size:1.8rem;
-        font-family: "Assistant";
+        font-size:1.5rem;
+        font-family: "Discovery";
         text-align: center;
         margin:3% auto;
         direction:rtl;
@@ -85,8 +85,8 @@
         color: rgb(64, 45, 21);
       }
       .title{
-        font-size:2rem;
-        font-family: "Assistant";
+        font-size:1.7rem;
+        font-family: "Discovery";
         text-align: center;
         margin:3% auto;
         direction:rtl;
@@ -120,8 +120,8 @@
         color: rgb(64, 45, 21);
       }
       .title{
-        font-size:2.2rem;
-        font-family: "Assistant";
+        font-size:1.85rem;
+        font-family: "Discovery";
         text-align: center;
         margin:3% auto;
         direction:rtl;

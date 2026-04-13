@@ -11,13 +11,13 @@
 }
 
 .title {
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   color: #7D9AAC;
   margin: 2rem 2rem 4rem 0;
-  font-family: 'Assistant', sans-serif;
+  font-family: 'Discovery', sans-serif;
   text-align: center;
   direction: rtl;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   line-height: 1.2;
   font-weight: 400;
 }
@@ -186,9 +186,9 @@
 }
 
 .numberText {
-  font-family: 'Assistant', sans-serif;
+  font-family: 'Discovery', sans-serif;
   font-weight: 700;
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   background: linear-gradient(135deg, #7D9AAC 0%, #7C99AC 100%);
   -webkit-background-clip: text;
   color: transparent;
@@ -197,10 +197,10 @@
 }
 
 .timelineTitle {
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   margin-bottom: 1rem;
   color: #7D9AAC;
-  font-family: 'Assistant', sans-serif;
+  font-family: 'Discovery', sans-serif;
 }
 
 .timelineText {
