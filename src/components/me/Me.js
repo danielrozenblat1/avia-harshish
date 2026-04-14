@@ -1,8 +1,8 @@
 import React, { useRef, useEffect, useState } from 'react';
 import styles from './Me.module.css';
 import aviaImage from "../../images/אביה הרשיש תדמית.webp";
-import projectImage1 from "../../images/אביה פרוייקטים חדשים 1.webp";
-import projectImage2 from "../../images/אביה הרשיש פרוייקט חדש 3.webp";
+import projectImage1 from "../../images/אביה תמונות חדשות 6.webp";
+import projectImage2 from "../../images/אביה תמונות חדשות 2.webp";
 
 const AboutMe = () => {
   const [isMobile, setIsMobile] = useState(false);

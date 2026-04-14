@@ -16,9 +16,12 @@ import newResult2 from "../../images/אביה תמונות חדשות 2.webp";
 import newResult3 from "../../images/אביה תמונות חדשות 3.webp";
 import newResult4 from "../../images/אביה תמונות חדשות 4.webp";
 import newResult5 from "../../images/אביה תמונות חדשות 5.webp";
+import newResult6 from "../../images/אביה תמונות חדשות 6.webp";
+import newResult7 from "../../images/אביה תמונות חדשות 7.webp";
 
 const Recommends = () => {
   const images = [
+    newResult6, newResult7,
     newResult1, newResult2, newResult3, newResult4, newResult5,
     result5, result6, result7, result8, result9, result3, result4,
     result10, result14
